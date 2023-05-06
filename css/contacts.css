@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Poppins:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -98,3 +98,87 @@ nav .nav-items.active {
 }
 
 /* style the content */
+.content {
+  font-family: "Montserrat", sans-serif;
+  width: fit-content;
+  height: 86vh;
+  padding: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 60px;
+}
+.content p {
+  width: 500px;
+  line-height: 1.6;
+}
+.content form {
+  width: 500px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 33px 0px;
+}
+.content label {
+  color: #3c72ae;
+}
+.inputBox {
+  width: 100%;
+  padding: 7px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.inquiry {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.submit {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  font-size: 17px;
+  color: white;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 7px;
+  background: #04aa6d;
+}
+.submit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 2px solid #04aa6d;
+  border-radius: 5px;
+  transition: 400ms;
+}
+.submit:hover {
+  background: #049661;
+}
+.submit:hover::before {
+  inset: -5px;
+}
+/* optimize for smaller screen desktop/tablet */
+@media (max-width: 1300px) {
+  .content {
+    height: fit-content;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+@media (max-width: 720px) {
+  .content {
+    width: 75%;
+    padding: 50px 0px 50px 0px;
+  }
+  .content p,
+  .content form {
+    width: 100%;
+  }
+}
